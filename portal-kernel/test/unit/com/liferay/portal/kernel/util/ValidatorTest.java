@@ -165,7 +165,7 @@ public class ValidatorTest {
 	public void testIsInvalidHostName() throws Exception {
 		testValidHostNames(
 			new String[] {
-				"(999.999.999)", "123_456_789_012", "www.$dollar$.com",
+				null, "(999.999.999)", "123_456_789_012", "www.$dollar$.com",
 				"{abcd:1234:ef01:2345:6789:0123:4567}", ".liferay.com"
 			},
 			false);
@@ -175,7 +175,7 @@ public class ValidatorTest {
 	public void testIsInvalidIPv4Address() throws Exception {
 		testValidIPv4Addresses(
 			new String[] {
-				"392.168.1.102", "255.0.0", "256.257.258.259",
+				null, "392.168.1.102", "255.0.0", "256.257.258.259",
 				"128.0000.001.002", "10.10.10.1000", "0192.0168.0001.0001"
 			},
 			false);
